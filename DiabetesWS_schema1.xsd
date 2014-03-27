@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" targetNamespace="http://servico.diabetes.com/" xmlns:tns="http://servico.diabetes.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="addMedico" nillable="true" type="tns:addMedico"/>
+
+  <xs:element name="addMedicoResponse" nillable="true" type="tns:addMedicoResponse"/>
+
+  <xs:element name="addNotaRegistro" nillable="true" type="tns:addNotaRegistro"/>
+
+  <xs:element name="addNotaRegistroResponse" nillable="true" type="tns:addNotaRegistroResponse"/>
+
+  <xs:element name="addPaciente" nillable="true" type="tns:addPaciente"/>
+
+  <xs:element name="addPacienteResponse" nillable="true" type="tns:addPacienteResponse"/>
+
+  <xs:element name="addPacientedoMedico" type="tns:addPacientedoMedico"/>
+
+  <xs:element name="addPacientedoMedicoResponse" type="tns:addPacientedoMedicoResponse"/>
+
+  <xs:element name="addRegistro" nillable="true" type="tns:addRegistro"/>
+
+  <xs:element name="addRegistroResponse" nillable="true" type="tns:addRegistroResponse"/>
+
+  <xs:complexType name="addMedico">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="addMedicoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="addPaciente">
+    <xs:sequence>
+      <xs:element name="codPaciente" type="xs:string" minOccurs="0"/>
+      <xs:element name="emailPac" type="xs:string" minOccurs="0"/>
+      <xs:element name="nascimentoPac" type="xs:dateTime" minOccurs="0"/>
+      <xs:element name="nomePac" type="xs:string" minOccurs="0"/>
+      <xs:element name="senhaPac" type="xs:string" minOccurs="0"/>
+      <xs:element name="sexoPac" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="addPacienteResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="addNotaRegistro">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="addNotaRegistroResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="addPacientedoMedico">
+    <xs:sequence>
+      <xs:element name="codPaciente" type="xs:string" minOccurs="0"/>
+      <xs:element name="senhaPaciente" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="addPacientedoMedicoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="addRegistro">
+    <xs:sequence>
+      <xs:element name="categoria" type="xs:string" minOccurs="0"/>
+      <xs:element name="datahora" type="xs:dateTime" minOccurs="0"/>
+      <xs:element name="tipo" type="xs:string" minOccurs="0"/>
+      <xs:element name="valor" type="xs:double" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="addRegistroResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+
